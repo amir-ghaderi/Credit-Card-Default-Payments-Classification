@@ -7,10 +7,11 @@
 ##### [Presentation Deck](https://github.com/mezud/ML-project/blob/master/ml-project.pdf) 
 ##### [Credit Card Dataset](https://github.com/mezud/ML-project/blob/master/ml-project.pdf) 
 ##### [Visualization Code](https://github.com/mezud/ML-project/blob/master/ml-project.pdf) 
-* [code for project1(decision trees)](https://github.com/mezud/ML-project/blob/master/project1-decisiontree)
-* [code for project1(knn)](https://github.com/mezud/ML-project/blob/master/project1-knn)
-* [code for project1(nnet)](https://github.com/mezud/ML-project/blob/master/project1-neural)
-* [code for project1(nnet)](https://github.com/mezud/ML-project/blob/master/project1-neural)
-* [code for project1(nnet)](https://github.com/mezud/ML-project/blob/master/project1-neural)
-* [code for project1(nnet)](https://github.com/mezud/ML-project/blob/master/project1-neural)
+* [Bar Plot D3.js](https://github.com/mezud/ML-project/blob/master/project1-decisiontree)
+* [Confusion Matrix D3.js](https://github.com/mezud/ML-project/blob/master/project1-knn)
+* [Correlation Plot D3.js](https://github.com/mezud/ML-project/blob/master/project1-neural)
+* [Interactive Decision Tree D3.js](https://github.com/mezud/ML-project/blob/master/project1-neural)
+* [Interactive Parallel Coordinates Plot D3.js](https://github.com/mezud/ML-project/blob/master/project1-neural)
+* [Interactive Scatter Plot D3.js](https://github.com/mezud/ML-project/blob/master/project1-neural)
+
 
