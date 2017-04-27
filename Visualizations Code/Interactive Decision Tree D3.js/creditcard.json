@@ -1,0 +1,28 @@
+{
+  "name": "Education >= 0.5833",
+  "children": [
+    {
+      "name": "SEX >= 0.5",
+      "children": [
+        {
+           "name": "Classification: 1"
+          
+        },
+        {
+          "name": "AGE >= 0.06481",
+          "children": [
+            {
+              "name": "Classification: 1"
+            },
+            {
+              "name": "Classification: 0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Classification: 0"
+    }
+  ]
+}
