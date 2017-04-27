@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> Amir Ghaderi Bar Plot D3</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js" charset="utf-8"></script>
+	<style>
+	h1{
+	text-align: center;
+	margin-top: 200px;
+	}
+	h2{
+	text-align: center;
+	}
+	svg{
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	}
+	
+	</style>
+</head>
+
+<body>
+	<h1>Classification Accuracy: Credit Card Dataset </h1> 
+	<script>
+	var data = [{name:"Naive Bayes",value:53.48},
+				{name:"SVM",value:61.88},
+				{name:"KNN",value:62.15},	
+				{name:"NeuralNet",value:62.49},
+				{name:"Bagging",value:62.71},
+				{name:"Tree",value:62.75},
+				{name:"C5.0",value:63.05},
+				{name:"Random Forest",value:64.86}];
+	
+	var margin = {top:20, right:10, bottom:100, left:100};
+ 	var width = 700 - margin.right - margin.left;
+	var height = 500 - margin.top - margin.bottom;
+	
+	var svg = d3.select('body')
+				.append('svg')
+				.attr("width", width + margin.right + margin.left)
+				.attr("height", height + margin.top + margin.bottom)
+				.append('g')
+				.attr("transform","translate(" + margin.left + ',' + margin.right + ')');
+	
+	var xScale = d3.scale.ordinal()
+					.rangeRoundBands([0,width],0.2,0.2);
+					
+	var yScale = d3.scale.linear()
+					.range([height,0]);
+					
+	var xAxis = d3.svg.axis()
+					.scale(xScale)
+					.orient("bottom");
+	
+	var yAxis = d3.svg.axis()
+					.scale(yScale)
+					.orient("left");
+					
+					
+	xScale.domain(data.map(function(d){return d.name;}));
+	yScale.domain([50,65]);
+	
+	svg.selectAll('rect')
+		.data(data)
+		.enter()
+		.append('rect')
+		.attr("height",0)
+		.attr("y",height)
+		.transition().duration(3000)
+		.delay(function(d,i){return i * 200;})
+		.attr('x', function(d){return xScale(d.name);})
+		.attr('y', function(d){return yScale(d.value);})
+		.attr('width', xScale.rangeBand())
+		.attr('height', function(d){return height - yScale(d.value) ;})
+		.style("fill","blue");
+		
+	svg.selectAll('text')
+		.data(data)
+		.enter()
+		.append('text')
+		.text(function(d){return d.value;})
+		.attr('x', function(d){return xScale(d.name) + xScale.rangeBand()/2;})
+		.attr('y', function(d){return yScale(d.value) + 18;})
+		.style('fill','white')
+		.style('text-anchor','middle')
+	
+	// X Axis Label
+	svg.append("text")
+		.attr("x", 320)
+		.attr("y", 430)
+		.style("text-anchor","middle")
+		.text("Classification Algorithm")
+		.style("font-weight","bold");
+		
+	// Y Axis Label
+	svg.append("text")
+		.attr("y", -50)
+		.attr("x", -180)
+		.style("text-anchor","middle")
+		.text("Percent Accuracy")
+		.attr("transform","rotate(-90)")
+		.style("font-weight","bold");
+		
+		
+	svg.append('g')
+		.attr("class","x axis")
+		.attr("transform","translate(0," + height + ")")
+		.call(xAxis);
+	
+	svg.append('g')
+		.attr("class", "y axis")
+		.call(yAxis);
+		
+	
+		
+	</script>
+	
+	
+</body>
+</html>
