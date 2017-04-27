@@ -12,6 +12,6 @@
 * [Correlation Plot D3.js](https://github.com/mezud/ML-project/blob/master/project1-neural)
 * [Interactive Decision Tree D3.js](https://github.com/mezud/ML-project/blob/master/project1-neural)
 * [Interactive Parallel Coordinates Plot D3.js](https://github.com/mezud/ML-project/blob/master/project1-neural)
-* [Interactive Scatter Plot D3.js](https://github.com/mezud/ML-project/blob/master/project1-neural)
+** [Interactive Scatter Plot D3.js](https://github.com/mezud/ML-project/blob/master/project1-neural)
 
 
