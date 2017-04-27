@@ -1,4 +1,4 @@
-# Credit-Card-Default-Payment-Classification
+# Credit Card Default Payment Classification
 
 ## Table of Contents
 
