@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Correlation Matrix</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+
+	
+</head>
+<body>
+	<h1>Correlation Plot Of Credit Card Default Data</h1>
+    <div style="display:inline-block;" id="legend"></div>
+    <div style="display:inline-block; float:left" id="container"></div>
+	
+	<script src="main.js"></script>
+	
+	<script>
+
+    var correlationMatrix = [
+        [1, 0, -0.2, -0.1, 0.1, 0.3, 0.3, 0.3, 0.3, 0.3,0.3,-0.2],
+        [0, 1, 0, 0, -0.1, 0, 0, 0, 0, 0,0,-0.1],
+        [-0.2, 0, 1, -0.2, 0.2, 0, 0, 0, 0, 0,0,0],
+        [-0.1, 0, -0.2, 1, -0.4, 0, 0, 0, 0, 0,0,0],
+        [0.1, -0.1, 0.2, -0.4, 1, 0.1, 0, 0, 0, 0,0,0],
+        [0.3, 0, 0, 0, 0.1, 1, 1, 0.9, 0.9, 0.8,0.8,0],
+		[0.3,0,0,0,0,1,1,0.9,0.9,0.9,0.8,0],
+        [0.3, 0, 0, 0, 0, 0.9, 0.9, 1, 0.9, 0.9,0.9,0],
+        [0.3, 0, 0, 0, 0, 0.9, 0.9, 0.9, 1, 0.9,0.9,0],
+        [0.3, 0, 0, 0, 0, 0.8, 0.9, 0.9, 0.9, 1,0.9,0],
+		[0.3,0,0,0,0,0.8,0.8,0.9,0.9,0.9,1,0],
+		[-0.2,-0.1,0,0,0,0,0,0,0,0,0,1]
+    ];
+
+    var labels = ['Limit', 'Sex', 'Education', 'Marriage', 'Age', 'Bill 1', 'Bill 2', 'Bill 3', 'Bill 4', 'Bill 5',"Bill 6","Class"];
+
+    Matrix({
+        container : '#container',
+        data      : correlationMatrix,
+        labels    : labels,
+        start_color : '#ffffff',
+        end_color : '#4d6cea'
+    });
+
+</script>
+</body>
